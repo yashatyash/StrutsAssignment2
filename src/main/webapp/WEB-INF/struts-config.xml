@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+        "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean name="employee" type="com.yash.model.Employee"/>
+    </form-beans>
+
+    <global-exceptions/>
+
+    <action-mappings>
+        <action path="/emp" name="employee" type="com.yash.controller.EmployeeAction"
+                parameter="parameter" scope="request">
+            <forward name="addEmployee" path="/success.jsp"/>
+            <forward name="updateEmployee" path="/success.jsp"/>
+            <forward name="error" path="/error.jsp"/>
+            <forward name="showAllEmployees" path="/showAllEmployees.jsp"/>
+        </action>
+    </action-mappings>
+
+    <message-resources parameter="application"/>
+</struts-config>
