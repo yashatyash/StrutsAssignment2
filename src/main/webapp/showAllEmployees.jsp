@@ -13,7 +13,19 @@
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.yash.model.Employee" %>
-
+<style>
+    .button
+    {
+        cursor: pointer;
+        border-radius: 5px;
+        height:30px;
+        width:100%;
+        background-color: aliceblue;
+        text-decoration-color: black;
+        text-align: center;
+        position: relative;
+    }
+</style>
 <html>
 <head>
     <title>Show Employees</title>
@@ -42,8 +54,15 @@
                 <td>${emp.salary}</td>
             </tr>
         </c:forEach>
-        <tr align="center">
-            <button type="button" onclick=document.location='${pageContext.request.contextPath}/'>Back</button>
+    </table>
+
+    <table align="center" cellpadding="10">
+        <tr>
+            <td align="center">
+                <button type="button" onclick=document.location='${pageContext.request.contextPath}/'
+                        class="button">Back
+                </button>
+            </td>
         </tr>
     </table>
 </body>

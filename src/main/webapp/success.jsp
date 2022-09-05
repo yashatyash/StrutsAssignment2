@@ -11,13 +11,32 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
+<style>
+    .button
+    {
+        cursor: pointer;
+        border-radius: 5px;
+        height:30px;
+        width:100%;
+        background-color: aliceblue;
+        text-decoration-color: black;
+        text-align: center;
+        position: relative;
+    }
+</style>
 <html>
 <head>
     <title>Success page</title>
 </head>
 <body style="font-size: large">
     <h2 align="center">Task Completed !!</h2>
-    <button type="button" onclick=document.location='${pageContext.request.contextPath}/' style="alignment:
-    center;border-radius: 5px">Back</button>
+    <table align="center" cellpadding="10">
+        <tr>
+            <td align="center">
+                <button type="button" onclick=document.location='${pageContext.request.contextPath}/' class="button">
+                    Back</button>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
